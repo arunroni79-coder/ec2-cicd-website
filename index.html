@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CloudLaunch | Cloud Deployment</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#080d1a;color:#f5f7ff;line-height:1.6}
+nav{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #27314a}
+.logo{font-size:22px;font-weight:bold;color:#62e6dc}
+nav a{color:#d4def5;text-decoration:none;margin-left:22px}
+.hero{min-height:75vh;display:flex;align-items:center;padding:70px 8%;background:radial-gradient(ellipse at 85% 20%,#27265b,transparent 45%)}
+.content{max-width:760px}
+.tag{color:#62e6dc;text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:bold}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;letter-spacing:-3px;margin:22px 0}
+.gradient{background:linear-gradient(90deg,#62e6dc,#a99cff);color:transparent;background-clip:text}
+p{color:#a8b4cc;font-size:18px;max-width:650px}
+.btn{display:inline-block;background:#62e6dc;color:#08111d;text-decoration:none;font-weight:bold;padding:13px 21px;border-radius:9px;margin-top:18px}
+section{padding:55px 8%}
+h2{font-size:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{padding:25px;background:#111a2e;border:1px solid #29334b;border-radius:15px}
+.card h3{color:#62e6dc}
+.card p{font-size:15px}
+footer{padding:25px 8%;border-top:1px solid #27314a;color:#a8b4cc}
+@media(max-width:600px){nav{padding:18px 5%}nav a{margin-left:10px;font-size:13px}.hero{padding:55px 5%}section{padding:40px 5%}h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">CloudLaunch</div>
+  <div><a href="#features">Features</a><a href="#pipeline">CI/CD</a></div>
+</nav>
+<main>
+  <div class="hero">
+    <div class="content">
+      <div class="tag">Cloud Engineering · Automation</div>
+      <h1>Build faster.<br><span class="gradient">Deploy smarter.</span></h1>
+      <p>A modern website hosted on Amazon EC2, powered by Apache and designed for automated deployment through GitHub Actions.</p>
+      <a class="btn" href="#pipeline">Explore the pipeline →</a>
+    </div>
+  </div>
+  <section id="features">
+    <h2>Cloud infrastructure, simplified.</h2>
+    <div class="cards">
+      <div class="card"><h3>☁ Amazon EC2</h3><p>A Linux virtual server hosting this website and serving visitors over HTTP.</p></div>
+      <div class="card"><h3>⌘ GitHub</h3><p>Version-controlled website files and workflow configuration in one repository.</p></div>
+      <div class="card"><h3>↗ Automated CI/CD</h3><p>Push a change to GitHub and automatically publish the updated website to EC2.</p></div>
+    </div>
+  </section>
+  <section id="pipeline">
+    <h2>From commit to live website.</h2>
+    <div class="cards">
+      <div class="card"><h3>01 · Code</h3><p>Update your HTML file.</p></div>
+      <div class="card"><h3>02 · Push</h3><p>Commit changes to GitHub.</p></div>
+      <div class="card"><h3>03 · Deploy</h3><p>GitHub Actions transfers the website to EC2.</p></div>
+    </div>
+  </section>
+</main>
+<footer>CloudLaunch · EC2 + Apache + GitHub Actions · <span id="year"></span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
